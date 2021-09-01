@@ -38,14 +38,10 @@ document.getElementById('start_r').onclick = function() {
             .getDisplayMedia(mediaStreamConstraints)
             .then(gotLocalMediaStream)
             .catch(handleLocalMediaStreamError);
-        if(localStream!=undefined){
-            document.getElementById("start").style.display ="block";
-            document.getElementById("bstart").style.display ="none";
-        }
     });
     peer.on("connection", (conn) => {
         //document.getElementById('getconnected').textContent = "接続されました";
-        //dataが送られたとき発火!
+        //dataが送られたとき発火
         conn.on("data", (data) => {
             //console.log(`${name}: ${msg}`);
             // => 'SkyWay: Hello, World!'
@@ -99,6 +95,8 @@ function resizeElement(){
 function gotLocalMediaStream(mediaStream) {
     localStream = mediaStream;
     localVideo.srcObject = mediaStream;
+    document.getElementById("start").style.display ="block";
+    document.getElementById("bstart").style.display ="none";
 }
 
 function handleLocalMediaStreamError(error) {
