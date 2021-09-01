@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="8mb.css">
+  <script src="https://cdn.webrtc.ecl.ntt.com/skyway-4.4.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="img">
+  </div>
+  <div class="btns" id="bstart">
+    <div class="nav" id="2start">
+      <a href="javascript:void(0);" class="btn btn-flat" id="start_r" onclick="start_r(); return false;"><span>ランダムなIDで開始</span></a>
+      <a href="javascript:void(0);" class="btn2 btn-flat2" id="start_id" onclick="start_id(); return false;"><span>指定するIDで開始</span></a>
+    </div>
+    <div class="upp" id="setided">
+      <input type="text" name="" value="" class="m-form-text" />
+      <a href="javascript:void(0);" class="btn3 btn-flat3" id="start_set_id" onclick="start_set_id('3'); return false;"><span>開始</span></a>
+    </div>
+  </div>
+  <div class="sta" id="start">
+    <p id="my-id">あなたのIDはまだ設定されていません</p>
+    <div class="Video">
+      <video id="prevideo" src="yXq4lETvuuCFd92gkZZD.mp4" width="720px" autoplay controls muted playsinline></video>
+    </div>
+    <a href="" class="btn4 btn-flat4" onclick="alert('3'); return false;"><span>操作する人に渡すURLをコピーする</span></a>
+    <br>
+    <div class="pyconnected">
+      <p id="pyconnected">ソフトとの連携が行われていません</p>
+    </div>
+    <a href="" class="btn5 btn-flat5" onclick="alert('3'); return false;"><span>このサイトと連携するソフトをダウンロードする</span></a>
+    
+  </div>
+</body>
+<script src="8mb.js"></script>
+</html>
