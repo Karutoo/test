@@ -45,7 +45,7 @@ document.getElementById('start_r').onclick = function() {
     });
     peer.on("connection", (conn) => {
         //document.getElementById('getconnected').textContent = "接続されました";
-        //dataが送られたとき発火
+        //dataが送られたとき発火!
         conn.on("data", (data) => {
             //console.log(`${name}: ${msg}`);
             // => 'SkyWay: Hello, World!'
