@@ -61,6 +61,8 @@ document.getElementById('start_id').onclick = function() {
 }
 
 document.getElementById('start_set_id').onclick = function() {
+    peer.disconnect();
+    peer.destroy();
     peer = new Peer(document.getElementById("typeID").value,{
         key: 'c2ad39ff-ed02-41e1-b1f1-c918871c1f28',
         debug: 3
