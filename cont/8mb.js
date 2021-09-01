@@ -48,16 +48,17 @@ function Scroll (event){
     console.log(event.wheelDelta)
 }
 document.getElementById("prevideo").addEventListener('mousemove', Mousemove);
-var vwidth = document.getElementById("prevideo").videoWidth ;
-var vheight = document.getElementById("prevideo").videoHeight ;
-var dwidth = document.getElementById("prevideo").clientWidth ;
-var dheight = document.getElementById("prevideo").clientHeight ;
 var _changeData = _.throttle(function (event) {
+    var vwidth = document.getElementById("prevideo").videoWidth ;
+    var vheight = document.getElementById("prevideo").videoHeight ;
+    var dwidth = document.getElementById("prevideo").clientWidth ;
+    var dheight = document.getElementById("prevideo").clientHeight ;
     if (dataConnection!=0){
         dataConnection.send("moveTo,"+event.offsetX*vwidth/dwidth+","+event.offsetY*vheight/dheight)
     }
-    console.log(event.offsetX)
-    console.log(event.offsetY)
+    console.log(event.offsetX*vwidth/dwidth)
+    console.log(vwidth)
+    console.log(event.offsetY*vheight/dheight)
   }, 150);
 function Mousemove(event){
     _changeData(event)
@@ -239,7 +240,7 @@ document.body.addEventListener('mouseleave', function(e) {
     isdrag=false
 })
 document.getElementById('resize').addEventListener('mousemove', function(e) {
-    console.log(e.pageX, e.pageY, e.clientX, e.clientY, e.offsetX, e.offsetY)
+    //console.log(e.pageX, e.pageY, e.clientX, e.clientY, e.offsetX, e.offsetY)
     var Ex=e.offsetX+bordersize
     var Ey=e.offsetY+bordersize
     var Vtag=document.getElementById('resize')
