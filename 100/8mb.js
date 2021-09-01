@@ -96,6 +96,9 @@ document.getElementById('start_set_id').onclick = function() {
     });
 }
 
+function copyURL(){
+    navigator.clipboard.writeText(peer.id);
+}
 
 var resizeFlg;    //setTimeoutの待機中かを判定するフラグ
 
