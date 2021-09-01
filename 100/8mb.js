@@ -61,8 +61,35 @@ document.getElementById('start_id').onclick = function() {
 }
 
 document.getElementById('start_set_id').onclick = function() {
-    document.getElementById("start").style.display ="block";
-    document.getElementById("setided").style.display ="none";
+    peer = new Peer(document.getElementById("typeID").value,{
+        key: 'c2ad39ff-ed02-41e1-b1f1-c918871c1f28',
+        debug: 3
+    });
+    peer.on('call', mediaConnection => {
+        mediaConnection.answer(localStream, {videoBandwidth: 14000, audioBandwidth: 4000});
+        setEventListener(mediaConnection);
+    });
+    peer.on('open', () => {
+        alert("画面共有開始します！")
+        navigator.mediaDevices
+            .getDisplayMedia(mediaStreamConstraints)
+            .then(gotLocalMediaStream)
+            .catch(handleLocalMediaStreamError);
+    });
+    peer.on("connection", (conn) => {
+        //document.getElementById('getconnected').textContent = "接続されました";
+        //dataが送られたとき発火
+        conn.on("data", (data) => {
+            //console.log(`${name}: ${msg}`);
+            // => 'SkyWay: Hello, World!'
+            try {
+                webSocket.send(data);
+                document.getElementById('dame').style.display ="none"
+            } catch (error) {
+                document.getElementById('dame').style.display ="block"
+            }
+        });
+    });
 }
 
 
@@ -97,6 +124,7 @@ function gotLocalMediaStream(mediaStream) {
     localVideo.srcObject = mediaStream;
     document.getElementById("start").style.display ="block";
     document.getElementById("bstart").style.display ="none";
+    document.getElementById("setided").style.display ="none";
 }
 
 function handleLocalMediaStreamError(error) {
