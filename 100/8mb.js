@@ -143,6 +143,7 @@ function gotLocalMediaStream(mediaStream) {
     document.getElementById("start").style.display ="block";
     document.getElementById("bstart").style.display ="none";
     document.getElementById("setided").style.display ="none";
+    document.getElementById("my-id").textContent='あなたのIDは："'+peer.id+'"です';
 }
 
 function handleLocalMediaStreamError(error) {
