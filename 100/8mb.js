@@ -115,10 +115,19 @@ function windowResizeFunc(){
 }
 
 window.onload = function(){
+    webSocket = new WebSocket("ws://localhost:9998")
     setInterval(() => {
-        webSocket = new WebSocket("ws://localhost:9998")
+        if (webSocket.readyState!=1){//通信ができていない時
+            webSocket = new WebSocket("ws://localhost:9998")
+            console.log("通信できていません")
+            document.getElementById("pyconnected").textContent="ソフトとの連携が行われていません";
+        }else{
+            document.getElementById("pyconnected").textContent="ソフトとの連携ができています";
+            console.log("通信できています！")
+        }
     }, 5000);
 }
+
 
 window.addEventListener("resize", windowResizeFunc);
 document.getElementById("prevideo").style.width=document.body.clientWidth/3*1.5+"px"
