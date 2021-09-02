@@ -127,7 +127,7 @@ window.onload = function(){
             document.getElementById("pyconnected").style.color ="#06ff82"
             console.log("通信できています！")
         }
-    }, 5000);
+    }, 2500);
 }
 
 
