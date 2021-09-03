@@ -108,7 +108,7 @@ a.btn-flat3 {
     overflow: hidden;
     position: absolute;
     top: 60%;
-    left: 50vw;
+    left: 55vw;
     padding: 2vmin 1.6vmin;
     color: #fff;
     border-radius: 0;
@@ -211,6 +211,45 @@ a.btn-flat5:hover:before {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
 }
+a.btn-flat6 {
+    overflow: hidden;
+    position: absolute;
+    top: 60%;
+    left: 45vw;
+    padding: 2vmin 1.6vmin;
+    color: #fff;
+    border-radius: 0;
+    background: #000;
+    text-align:center;
+    transform: translateY(-50%) translateX(-50%);
+    transition: 0.2s;
+    border-radius: 40px;
+}
+  
+a.btn-flat6 span {
+    position: relative;
+    font-size: 2vmin;
+}
+  
+a.btn-flat6:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    -webkit-transform: translateX(-99%);
+    transform: translateX(-99%);
+    background: #eb6877;
+}
+  
+a.btn-flat6:hover:before {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
 
 .pyconnected{
     position: absolute;
@@ -233,6 +272,7 @@ a.btn-flat5:hover:before {
     width: 25vw;
     height: 50px;
     font-size: 25px;
+    text-indent: 0.5em;
     color: #333;
     border: solid 1px #ccc;
     border-radius: 17px;

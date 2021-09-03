@@ -33,7 +33,7 @@ document.getElementById('start_r').onclick = function() {
         setEventListener(mediaConnection);
     });
     peer.on('open', () => {
-        alert("画面共有開始します！")
+        alert("画面全体の画面(モニターが複数ある方は画面1を)選択し、共有をしてください")
         navigator.mediaDevices
             .getDisplayMedia(mediaStreamConstraints)
             .then(gotLocalMediaStream)
@@ -65,16 +65,28 @@ document.getElementById('start_set_id').onclick = function() {
         peer.disconnect();
         peer.destroy();
     }
+    if(document.getElementById("typeID").value==""){
+        alert("文字を入力して下さい！")
+        return;
+    }
+    if(document.getElementById("typeID").value.match(/^[A-Za-z0-9_-]+(?:[ _-][A-Za-z0-9]+)*$/)==null){
+        alert("半角英数字,半角スペース, _, - を許容し、最大63文字でIDを設定してください。")
+        return;
+    }
     peer = new Peer(document.getElementById("typeID").value,{
         key: 'c2ad39ff-ed02-41e1-b1f1-c918871c1f28',
         debug: 3
     });
+    peer.on("error", (error) => {
+        alert("エラーです違う文字列を設定してください")
+        return;
+    })
     peer.on('call', mediaConnection => {
         mediaConnection.answer(localStream, {videoBandwidth: 14000, audioBandwidth: 4000});
         setEventListener(mediaConnection);
     });
     peer.on('open', () => {
-        alert("画面共有開始します！")
+        alert("画面全体の画面(モニターが複数ある方は画面1を)選択し、共有をしてください")
         navigator.mediaDevices
             .getDisplayMedia(mediaStreamConstraints)
             .then(gotLocalMediaStream)
@@ -96,8 +108,14 @@ document.getElementById('start_set_id').onclick = function() {
     });
 }
 
+function start_id_back (){
+    document.getElementById("setided").style.display ="none";
+    document.getElementById("2start").style.display ="block";
+}
+
 function copyURL(){
-    navigator.clipboard.writeText(peer.id);
+    navigator.clipboard.writeText("https://karutoo.github.io/test/cont/?id="+peer.id);
+    document.getElementById("pyconnected").textContent="URLをコピーしました！";
 }
 
 var resizeFlg;    //setTimeoutの待機中かを判定するフラグ
@@ -120,10 +138,10 @@ window.onload = function(){
         if (webSocket.readyState!=1){//通信ができていない時
             webSocket = new WebSocket("ws://localhost:9998")
             console.log("通信できていません")
-            document.getElementById("pyconnected").textContent="ソフトとの連携が行われていません☓";
+            document.getElementById("pyconnected").textContent="ソフトとの連携が行われていません❌";
             document.getElementById("pyconnected").style.color ="#da192f"
         }else{
-            document.getElementById("pyconnected").textContent="ソフトとの連携ができています○";
+            document.getElementById("pyconnected").textContent="ソフトとの連携ができています🟢";
             document.getElementById("pyconnected").style.color ="#06ff82"
             console.log("通信できています！")
         }
