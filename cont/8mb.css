@@ -20,7 +20,7 @@ a.btn-flat3 {
     overflow: hidden;
     position: absolute;
     top: 10vh;
-    left: 57vw;
+    left: 60vw;
     padding: 1vmin 1.1vmin;
     color: #fff;
     border-radius: 0;
@@ -60,17 +60,18 @@ a.btn-flat3:hover:before {
     position: absolute;
     box-sizing: border-box;
     top: 10vh;
-    left: 50vw;
+    left: 60vw;
     width: 30vw;
     height: 4vmin;
     font-size: 2.5vmin;
+    text-indent: 0.5em;
     color: #333;
     border: solid 1px #ccc;
     border-radius: 17px;
     outline: 0;
     transition: 0.2s;
     -webkit-appearance: none;
-    transform: translateX(-80%);
+    transform: translateX(-100%);
 }
 
 .m-form-text:focus {
