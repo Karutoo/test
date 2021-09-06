@@ -151,7 +151,7 @@ a.btn-flat4 {
     border-radius: 0;
     background: #000;
     border-radius: 10px;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(250%);
 }
   
 a.btn-flat4 span {
@@ -185,7 +185,8 @@ a.btn-flat5 {
     color: #fff;
     background: #000;
     border-radius: 10px;
-    transform: translateX(-50%) translateY(250%);
+    margin-top: 1vmin;
+    transform: translateX(-50%) translateY(100%);
 }
   
 a.btn-flat5 span {
@@ -256,6 +257,7 @@ a.btn-flat6:hover:before {
     font-size: 2.9vmin;
     overflow: hidden;
     left: 50%;
+    width: fit-content;
     background: #19b8e9;
     transform: translateX(-50%) translateY(-10%);
     line-height: 0%;
