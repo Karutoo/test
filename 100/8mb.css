@@ -260,7 +260,7 @@ a.btn-flat6:hover:before {
     transform: translateX(-50%) translateY(-10%);
     line-height: 0%;
     padding: 0px 1vw;
-    margin-top: -1.5vmin;
+    margin-top: 1vmin;
     border: dashed 2px #5b8bd0;/*点線*/
 }
 
@@ -283,7 +283,7 @@ a.btn-flat6:hover:before {
 }
 
 .aconnected{
-    
+
 }
 
 .m-form-text:focus {
