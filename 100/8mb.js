@@ -20,7 +20,7 @@ var ID
 var dataConnection
 var iswebsocket=0
 var webSocket
-//document.getElementById("start").style.display ="none";
+document.getElementById("start").style.display ="none";
 document.getElementById("setided").style.display ="none";
 //ランダムなIDで開始する
 document.getElementById('start_r').onclick = function() {
