@@ -151,7 +151,7 @@ a.btn-flat4 {
     border-radius: 0;
     background: #000;
     border-radius: 10px;
-    transform: translateX(-50%) translateY(250%);
+    transform: translateX(-50%) translateY(290%);
 }
   
 a.btn-flat4 span {
@@ -186,7 +186,7 @@ a.btn-flat5 {
     background: #000;
     border-radius: 10px;
     margin-top: 1vmin;
-    transform: translateX(-50%) translateY(100%);
+    transform: translateX(-50%) translateY(140%);
 }
   
 a.btn-flat5 span {
