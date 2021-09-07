@@ -149,6 +149,9 @@ peer.on("connection", (conn) => {
 
 window.onload = function() {
     document.getElementById('typeID').value=params.get('id');
+    if(params.get('id')!=null){
+        startB()
+    }
 }
 const setEventListener = mediaConnection => {
     mediaConnection.on('stream', stream => {
@@ -203,7 +206,7 @@ function resizeElement(){
     document.getElementById("resize").style.height="auto"
 }
 
-var mouserange=10
+var mouserange=4
 var bordersize=4
 var pading = 5
 var OVERMOUSEX
@@ -246,7 +249,7 @@ document.getElementById('resize').addEventListener('mousemove', function(e) {
     var Vtag=document.getElementById('resize')
     var onlycor
     var left,right,up,down
-    
+    window.getSelection().removeAllRanges()
     if(Ex<mouserange){
         console.log("左端です！")
         left=true
