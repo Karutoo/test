@@ -15,7 +15,12 @@ body,html{
     display: block;
     padding-top: 50%;
 }
-
+.bg{
+    position: relative;
+    background: linear-gradient(#bed0e6, #f3f7fc);
+    width: 100%;
+    height: 100vh;
+}
 a.btn-flat3 {
     overflow: hidden;
     position: absolute;
@@ -79,7 +84,6 @@ a.btn-flat3:hover:before {
 }
 .sta{
     position: absolute;
-    background-color: rgba(0,0,0,0.3);
     display: flex;
     justify-content: space-evenly;
     color: #fff;
@@ -99,6 +103,24 @@ a.btn-flat3:hover:before {
     transform: translate(-50%, -50%);
     overflow: hidden;
 }
+.Video:before{
+    content: "";
+    border: solid 1px rgb(255, 255, 255);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+}
+.Video:after{
+    content: "";
+    border: solid 2px rgb(113, 204, 113);
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+}
 .prevideo:focus {
     outline: none;
   }
@@ -107,7 +129,6 @@ a.btn-flat3:hover:before {
     width: 100%;
     top: 0;
     height: 100%;
-    background-color: rgba(0,0,0,0.3);
     display: flex;
     justify-content: space-evenly;
     color: #fff;
