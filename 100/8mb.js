@@ -33,7 +33,7 @@ document.getElementById('start_r').onclick = function() {
         setEventListener(mediaConnection);
     });
     peer.on('open', () => {
-        alert("画面全体の画面(モニターが複数ある方は画面1を)選択し、共有をしてください")
+        alert("画面全体の画面(モニターが複数ある方は画面)1を選択し、共有をしてください")
         navigator.mediaDevices
             .getDisplayMedia(mediaStreamConstraints)
             .then(gotLocalMediaStream)

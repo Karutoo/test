@@ -28,10 +28,9 @@ body,html{
     position: absolute;
     width: fit-content;
     text-align:center;
-    top: 13vmin;
+    top: 20vmin;
     font-size: 3.7vmin;
     color: #009999;
-    transform: translateX(-50%);
     border-bottom: solid 2px #00b5ad;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 }
