@@ -59,7 +59,7 @@ var _changeData = _.throttle(function (event) {
     console.log(event.offsetX*vwidth/dwidth)
     console.log(vwidth)
     console.log(event.offsetY*vheight/dheight)
-  }, 75);
+  }, 100);
 function Mousemove(event){
     _changeData(event)
 }
