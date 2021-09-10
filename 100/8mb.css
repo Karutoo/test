@@ -290,10 +290,20 @@ a.btn-flat6:hover:before {
     border: dashed 2px #5b8bd0;/*点線*/
 }
 .tezyun1{
-    
+    position: absolute;
+    left: 50vw;
+    width: fit-content;
+    font-size: 2vmin;
+    color: #333;
+    transform: translateX(-50%) translateY(150%);
 }
 .tezyun2{
-
+    position: absolute;
+    left: 50vw;
+    width: fit-content;
+    font-size: 2vmin;
+    color: #333;
+    transform: translateX(-50%) translateY(210%);
 }
 .m-form-text {
     position: absolute;
