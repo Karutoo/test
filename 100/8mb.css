@@ -282,7 +282,7 @@ a.btn-flat6:hover:before {
     overflow: hidden;
     left: 50%;
     width: fit-content;
-    background: #84e1fd;
+    background: #FFF;
     transform: translateX(-50%) translateY(-10%);
     line-height: 0%;
     padding: 0px 1vw;
