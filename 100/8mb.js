@@ -152,9 +152,9 @@ window.onload = function(){
 
 
 window.addEventListener("resize", windowResizeFunc);
-document.getElementById("prevideo").style.width=document.body.clientWidth/3*1.5+"px"
+document.getElementById("prevideo").style.width=document.body.clientWidth/3*1.1+"px"
 function resizeElement(){
-    document.getElementById("prevideo").style.width=document.body.clientWidth/3*1.5+"px"
+    document.getElementById("prevideo").style.width=document.body.clientWidth/3*1.1+"px"
 }
 
 function gotLocalMediaStream(mediaStream) {
