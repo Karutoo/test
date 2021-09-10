@@ -298,7 +298,8 @@ a.btn-flat6:hover:before {
     width: fit-content;
     font-size: 2vmin;
     color: #717171;
-    transform: translateX(-50%) translateY(150%);
+    margin-top: 6.7vmin;
+    transform: translateX(-50%);
 }
 .tezyun2{
     position: absolute;
@@ -306,7 +307,8 @@ a.btn-flat6:hover:before {
     width: fit-content;
     font-size: 2vmin;
     color: #717171;
-    transform: translateX(-50%) translateY(220%);
+    margin-top: 7vmin;
+    transform: translateX(-50%);
 }
 .m-form-text {
     position: absolute;

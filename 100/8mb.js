@@ -140,7 +140,7 @@ window.onload = function(){
             console.log("通信できていません")
             document.getElementById("pyconnected").textContent="❌ソフトが起動していません(操作できない)❌";
             document.getElementById("pyconnected").style.color ="#da192f"
-            document.getElementById("pyconnected").style.background ="#84e1fd"
+            document.getElementById("pyconnected").style.background ="#FFF"
         }else{
             document.getElementById("pyconnected").textContent="🟢遠隔操作が可能な状態です🟢";
             document.getElementById("pyconnected").style.color ="#FFF"
