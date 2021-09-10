@@ -175,7 +175,7 @@ a.btn-flat4 {
     border-radius: 0;
     background: #155aaf;
     border-radius: 10px;
-    transform: translateX(-50%) translateY(420%);
+    transform: translateX(-50%) translateY(520%);
 }
   
 a.btn-flat4 span {
@@ -289,12 +289,15 @@ a.btn-flat6:hover:before {
     margin-top: 1vmin;
     border: dashed 2px #5b8bd0;/*点線*/
 }
+.myid{
+    color: #717171;
+}
 .tezyun1{
     position: absolute;
     left: 50vw;
     width: fit-content;
     font-size: 2vmin;
-    color: #333;
+    color: #717171;
     transform: translateX(-50%) translateY(150%);
 }
 .tezyun2{
@@ -302,8 +305,8 @@ a.btn-flat6:hover:before {
     left: 50vw;
     width: fit-content;
     font-size: 2vmin;
-    color: #333;
-    transform: translateX(-50%) translateY(210%);
+    color: #717171;
+    transform: translateX(-50%) translateY(220%);
 }
 .m-form-text {
     position: absolute;

@@ -138,7 +138,7 @@ window.onload = function(){
         if (webSocket.readyState!=1){//通信ができていない時
             webSocket = new WebSocket("ws://localhost:9998")
             console.log("通信できていません")
-            document.getElementById("pyconnected").textContent="❌下のソフトが起動していません(操作できない)❌";
+            document.getElementById("pyconnected").textContent="❌ソフトが起動していません(操作できない)❌";
             document.getElementById("pyconnected").style.color ="#da192f"
             document.getElementById("pyconnected").style.background ="#84e1fd"
         }else{
