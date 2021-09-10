@@ -138,11 +138,13 @@ window.onload = function(){
         if (webSocket.readyState!=1){//通信ができていない時
             webSocket = new WebSocket("ws://localhost:9998")
             console.log("通信できていません")
-            document.getElementById("pyconnected").textContent="❌ソフトとの連携が行われていません❌";
+            document.getElementById("pyconnected").textContent="❌下のソフトが起動していません(操作できない)❌";
             document.getElementById("pyconnected").style.color ="#da192f"
+            document.getElementById("pyconnected").style.background ="#84e1fd"
         }else{
-            document.getElementById("pyconnected").textContent="🟢ソフトとの連携ができています🟢";
-            document.getElementById("pyconnected").style.color ="#06ff82"
+            document.getElementById("pyconnected").textContent="🟢遠隔操作が可能な状態です🟢";
+            document.getElementById("pyconnected").style.color ="#FFF"
+            document.getElementById("pyconnected").style.background ="#90daa3"
             console.log("通信できています！")
         }
     }, 2500);

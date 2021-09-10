@@ -21,6 +21,16 @@ body,html{
     width: 100%;
     height: 100vh;
 }
+.titleicon{
+    position: absolute;
+    transform: translateX(-50%);
+    top: 10vh;
+    width: 80vmin;
+    height: auto;
+}
+.img_center{
+    text-align: center;
+}
 .nav{
     display: flex;
 }
@@ -28,7 +38,7 @@ body,html{
     position: absolute;
     width: fit-content;
     text-align:center;
-    top: 13vmin;
+    top: 25vmin;
     font-size: 3.7vmin;
     color: #009999;
     transform: translateX(-50%);
@@ -48,7 +58,7 @@ body,html{
 a.btn-flat {
     overflow: hidden;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 40vw;
     padding: 2vmin 4vmin;
     color: #fff;
@@ -85,7 +95,7 @@ a.btn-flat:hover:before {
 a.btn-flat2 {
     overflow: hidden;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 60vw;
     padding: 2vmin 4vmin;
     color: #fff;
@@ -272,7 +282,7 @@ a.btn-flat6:hover:before {
     overflow: hidden;
     left: 50%;
     width: fit-content;
-    background: #19b8e9;
+    background: #84e1fd;
     transform: translateX(-50%) translateY(-10%);
     line-height: 0%;
     padding: 0px 1vw;
