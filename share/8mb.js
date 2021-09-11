@@ -114,7 +114,7 @@ function start_id_back (){
 }
 
 function copyURL(){
-    navigator.clipboard.writeText("https://karutoo.github.io/test/cont/?id="+peer.id);
+    navigator.clipboard.writeText("https://radiconscreen/controll/?id="+peer.id);
     document.getElementById("pyconnected").textContent="URLをコピーしました！";
 }
 
