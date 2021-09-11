@@ -114,7 +114,7 @@ function start_id_back (){
 }
 
 function copyURL(){
-    navigator.clipboard.writeText("https://radiconscreen/controll/?id="+peer.id);
+    navigator.clipboard.writeText("https://radiconscreen.com/controll/?id="+peer.id);
     document.getElementById("pyconnected").textContent="URLをコピーしました！";
 }
 
