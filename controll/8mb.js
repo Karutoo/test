@@ -96,7 +96,7 @@ function Keydown(event){
         hikaku=event.key
     }
     if(hikaku=="Hankaku" || hikaku=="Zenkaku"){
-        continue
+        return
     }
     if(keylists.indexOf(hikaku)){
         //console.log(keylists.indexOf(hikaku))
