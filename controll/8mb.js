@@ -105,7 +105,7 @@ function Keydown(event){
 }
 document.getElementById("prevideo").addEventListener('keyup', Keyup);
 function Keyup(event){
-    var hikaku
+    /*var hikaku
     var retan
     if(event.key.length==1){
         hikaku=event.key.toLowerCase()
@@ -116,7 +116,7 @@ function Keyup(event){
         hikaku="Zenkaku"
     }else if(hikaku=="Zenkaku"){
         hikaku="Hankaku"
-    }
+    }*/
     if(keylists.indexOf(hikaku)){
         dataConnection.send("keyUp,"+keylists.indexOf(hikaku))
         //console.log(keylists.indexOf(hikaku))
