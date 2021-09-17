@@ -38,7 +38,7 @@ keylists=
 'prtsc', 'prtscr', 'return', 'ArrowRight', 'scrolllock', 'select', 'separator',
 'Shift', 'shiftleft', 'shiftright', 'sleep', 'space', 'stop', 'subtract', 'Tab',
 'ArrowUp', 'volumedown', 'volumemute', 'volumeup', 'Meta', 'winleft', 'winright', "\\",
-'command', 'option', 'optionleft', 'optionright'
+'command', 'option', 'optionleft', 'optionright', 'hanja'
 ]
 
 document.getElementById("prevideo").addEventListener('mousewheel', Scroll);
@@ -90,15 +90,18 @@ function Keydown(event){
     event.keyCode = null;
     event.returnValue = false;
     var hikaku
-    /*if(event.key.length==1){
+    if(event.key.length==1){
         hikaku=event.key.toLowerCase()
     }else{
         hikaku=event.key
     }
+    if(hikaku=="Hankaku" || hikaku=="Zenkaku"){
+        continue
+    }
     if(keylists.indexOf(hikaku)){
         //console.log(keylists.indexOf(hikaku))
         dataConnection.send("keyDown,"+keylists.indexOf(hikaku))
-    }*/
+    }
     console.log("↓ダウン")
     console.log(event)
     console.log(keylists.indexOf(hikaku))
@@ -112,11 +115,9 @@ function Keyup(event){
     }else{
         hikaku=event.key
     }
-    /*if(hikaku=="Hankaku"){
-        hikaku="Zenkaku"
-    }else if(hikaku=="Zenkaku"){
-        hikaku="Hankaku"
-    }*/
+    if(hikaku=="Hankaku" || hikaku=="Zenkaku"){
+        hikaku="hanja"
+    }
     if(keylists.indexOf(hikaku)){
         dataConnection.send("keyUp,"+keylists.indexOf(hikaku))
         //console.log(keylists.indexOf(hikaku))
