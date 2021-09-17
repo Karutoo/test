@@ -90,7 +90,7 @@ function Keydown(event){
     event.keyCode = null;
     event.returnValue = false;
     var hikaku
-    if(event.key.length==1){
+    /*if(event.key.length==1){
         hikaku=event.key.toLowerCase()
     }else{
         hikaku=event.key
@@ -98,7 +98,7 @@ function Keydown(event){
     if(keylists.indexOf(hikaku)){
         //console.log(keylists.indexOf(hikaku))
         dataConnection.send("keyDown,"+keylists.indexOf(hikaku))
-    }
+    }*/
     console.log("↓ダウン")
     console.log(event)
     console.log(keylists.indexOf(hikaku))
@@ -112,11 +112,11 @@ function Keyup(event){
     }else{
         hikaku=event.key
     }
-    if(hikaku=="Hankaku"){
+    /*if(hikaku=="Hankaku"){
         hikaku="Zenkaku"
     }else if(hikaku=="Zenkaku"){
         hikaku="Hankaku"
-    }
+    }*/
     if(keylists.indexOf(hikaku)){
         dataConnection.send("keyUp,"+keylists.indexOf(hikaku))
         //console.log(keylists.indexOf(hikaku))
